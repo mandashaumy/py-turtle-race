@@ -1,0 +1,45 @@
+import turtle
+import time
+
+__Pen = turtle.Pen()
+window = turtle.Screen()
+
+def drawsquare(color,face):
+    __Pen.fillcolor(color)
+    __Pen.begin_fill()
+    for __count in range(4):
+        __Pen.forward(face)
+        __Pen.right(90)
+    __Pen.forward(face)
+    __Pen.end_fill()
+
+#Get start with Python
+turtle.bgpic('arrow.gif')
+__Pen.penup()
+__Pen.goto((-200), 200)
+__Pen.pendown()
+__Pen.pencolor("#006d77")
+count = 1
+face = 1
+for i in range(8):
+    if (face == 1) :
+        for i in range(8):
+            if (count % 2 == 0) :
+                drawsquare('#006d77', 50)
+            else :
+                drawsquare('white', 50)
+            count += 1
+        __Pen.right(90)
+        __Pen.forward(100)
+        __Pen.left(90)
+        face = 0
+    else :
+        for i in range(8):
+            if (count % 2 == 0) :
+                drawsquare('#006d77', (-50))
+            else :
+                drawsquare('white', (-50))
+            count += 1
+        face = 1
+
+turtle.done()

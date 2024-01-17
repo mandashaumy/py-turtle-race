@@ -1,0 +1,31 @@
+import turtle
+
+pen = turtle.Turtle()
+screen = turtle.Screen()
+
+screen.bgcolor('black')
+pen.pencolor('purple')
+
+# #pentagon
+# pen.penup()
+# pen.goto(0, 200)
+# pen.pendown()
+# pen.right(35)
+# for i in range(5):
+#     pen.forward(100)
+#     pen.right(72)
+# pen.clear() 
+
+# #circle
+# pen.penup()
+# pen.goto(0, 0)
+# pen.pendown()
+# pen.circle(100)
+
+#pentagon with circle
+# pen.circle(100, 360, 5)
+
+for i in range(50):
+    pen.circle(2*i, 45)
+    
+turtle.done()
